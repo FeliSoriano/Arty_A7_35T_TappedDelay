@@ -1,0 +1,18 @@
+{
+  "name": "app_v03",
+  "type": "HOST",
+  "platform": "C:\\Users\\alumn\\Documents\\UNSAM\\PFI\\TDC\\Full_TDC_Project\\All_Vitis\\platform_v03\\export\\platform_v03\\platform_v03.xpfm",
+  "domain": "standalone_microblaze_0",
+  "cpuInstance": "microblaze_0",
+  "cpuType": "microblaze",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "standalone_microblaze_0",
+  "applicationFlow": "EMBEDDED",
+  "previousBuildStatusMap": {
+    "hw": "SUCCESS"
+  }
+}

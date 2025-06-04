@@ -1,0 +1,15 @@
+axi_ethernetlite_0:
+- axi_ethernetlite
+- emaclite
+axi_gpio_led:
+- axi_gpio
+- gpio
+axi_intc_0:
+- axi_intc
+- intc
+axi_timer_0:
+- axi_timer
+- tmrctr
+axi_uartlite_0:
+- axi_uartlite
+- uartlite

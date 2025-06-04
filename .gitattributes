@@ -1,0 +1,9 @@
+# Force LF line endings
+* text=auto eol=lf
+
+# Explicitly set for known types
+*.vhd text eol=lf
+*.c   text eol=lf
+*.h   text eol=lf
+*.sh  text eol=lf
+*.py  text eol=lf

@@ -1,0 +1,2 @@
+mb-ar qc libemaclite.a CMakeFiles/emaclite.dir/xemaclite.c.obj CMakeFiles/emaclite.dir/xemaclite_g.c.obj CMakeFiles/emaclite.dir/xemaclite_intr.c.obj CMakeFiles/emaclite.dir/xemaclite_l.c.obj CMakeFiles/emaclite.dir/xemaclite_selftest.c.obj CMakeFiles/emaclite.dir/xemaclite_sinit.c.obj
+C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/bin/mb-ranlib.exe libemaclite.a
