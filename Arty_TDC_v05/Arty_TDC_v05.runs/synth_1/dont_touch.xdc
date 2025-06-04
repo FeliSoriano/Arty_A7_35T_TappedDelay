@@ -57,8 +57,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_
 # IP: bd/system/ip/system_rst_mig_7series_0_81M_1/system_rst_mig_7series_0_81M_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_rst_mig_7series_0_81M_1 || ORIG_REF_NAME==system_rst_mig_7series_0_81M_1} -quiet] -quiet
 
-# IP: bd/system/ip/system_Arty_AXITDC_0_0/system_Arty_AXITDC_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_Arty_AXITDC_0_0 || ORIG_REF_NAME==system_Arty_AXITDC_0_0} -quiet] -quiet
+# IP: bd/system/ip/system_xlconstant_0_0/system_xlconstant_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlconstant_0_0 || ORIG_REF_NAME==system_xlconstant_0_0} -quiet] -quiet
 
 # IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
@@ -72,7 +72,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto
 # IP: bd/system/ip/system_auto_cc_0/system_auto_cc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto_cc_0 || ORIG_REF_NAME==system_auto_cc_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_xlconstant_0_0/system_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlconstant_0_0 || ORIG_REF_NAME==system_xlconstant_0_0} -quiet] -quiet
+# IP: bd/system/ip/system_Arty_AXITDC_0_3/system_Arty_AXITDC_0_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_Arty_AXITDC_0_3 || ORIG_REF_NAME==system_Arty_AXITDC_0_3} -quiet] -quiet
 
 # XDC: c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/system_ooc.xdc

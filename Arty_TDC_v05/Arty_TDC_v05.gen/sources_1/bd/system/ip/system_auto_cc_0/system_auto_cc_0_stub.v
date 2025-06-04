@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Wed Jun  4 11:51:10 2025
+// Date        : Wed Jun  4 11:51:08 2025
 // Host        : ASUS-Soriano running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_auto_cc_0 -prefix
+//               system_auto_cc_0_ system_auto_cc_0_stub.v
 // Design      : system_auto_cc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35ticsg324-1L

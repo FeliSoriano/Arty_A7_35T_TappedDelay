@@ -47,8 +47,8 @@
         }
       },
       "rst_mig_7series_0_81M": "",
-      "Arty_AXITDC_0": "",
-      "xlconstant_0": ""
+      "xlconstant_0": "",
+      "Arty_AXITDC_0": ""
     },
     "interface_ports": {
       "ddr3_sdram": {
@@ -1684,25 +1684,6 @@
         "xci_path": "ip\\system_rst_mig_7series_0_81M_1\\system_rst_mig_7series_0_81M_1.xci",
         "inst_hier_path": "rst_mig_7series_0_81M"
       },
-      "Arty_AXITDC_0": {
-        "vlnv": "xilinx.com:user:Arty_AXITDC:1.0",
-        "ip_revision": "1",
-        "xci_name": "system_Arty_AXITDC_0_0",
-        "xci_path": "ip\\system_Arty_AXITDC_0_0\\system_Arty_AXITDC_0_0.xci",
-        "inst_hier_path": "Arty_AXITDC_0",
-        "interface_ports": {
-          "s_axi": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Slave",
-            "memory_map_ref": "s_axi"
-          },
-          "s_axi_1": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Slave",
-            "memory_map_ref": "s_axi_1"
-          }
-        }
-      },
       "xlconstant_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "ip_revision": "8",
@@ -1715,6 +1696,25 @@
           },
           "CONST_WIDTH": {
             "value": "11"
+          }
+        }
+      },
+      "Arty_AXITDC_0": {
+        "vlnv": "xilinx.com:user:Arty_AXITDC:1.0",
+        "ip_revision": "1",
+        "xci_name": "system_Arty_AXITDC_0_3",
+        "xci_path": "ip\\system_Arty_AXITDC_0_3\\system_Arty_AXITDC_0_3.xci",
+        "inst_hier_path": "Arty_AXITDC_0",
+        "interface_ports": {
+          "s_axi": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "s_axi"
+          },
+          "s_axi_1": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "s_axi_1"
           }
         }
       }
@@ -1852,9 +1852,9 @@
           "ram_interconnect/ACLK",
           "ram_interconnect/S00_ACLK",
           "ram_interconnect/S01_ACLK",
+          "perif_interconnect/M02_ACLK",
           "Arty_AXITDC_0/clk",
-          "Arty_AXITDC_0/s_axi_aclk",
-          "perif_interconnect/M02_ACLK"
+          "Arty_AXITDC_0/s_axi_aclk"
         ]
       },
       "mig_7series_0_mmcm_locked": {
@@ -1899,8 +1899,8 @@
           "ram_interconnect/ARESETN",
           "ram_interconnect/S00_ARESETN",
           "ram_interconnect/S01_ARESETN",
-          "Arty_AXITDC_0/s_axi_aresetn",
-          "perif_interconnect/M02_ARESETN"
+          "perif_interconnect/M02_ARESETN",
+          "Arty_AXITDC_0/s_axi_aresetn"
         ]
       },
       "rst_mig_7series_0_81M_peripheral_aresetn": {
@@ -1931,12 +1931,12 @@
             "segments": {
               "SEG_Arty_AXITDC_0_reg0": {
                 "address_block": "/Arty_AXITDC_0/s_axi/reg0",
-                "offset": "0x43C00000",
+                "offset": "0x00010000",
                 "range": "4K"
               },
               "SEG_Arty_AXITDC_0_reg0_1": {
                 "address_block": "/Arty_AXITDC_0/s_axi_1/reg0",
-                "offset": "0x43C10000",
+                "offset": "0x00004000",
                 "range": "16K"
               },
               "SEG_axi_uartlite_0_Reg": {

@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticsg324-1L
 
@@ -84,7 +86,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/alumn/AppData/Roaming/Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:arty-a7-35:part0:1.1 [current_project]
-set_property ip_repo_paths c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/ip_packager [current_project]
+set_property ip_repo_paths c:/Users/alumn/AppData/Roaming/Xilinx/ip_repo [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -121,11 +123,6 @@ set_property used_in_implementation false [get_files -all c:/Users/alumn/Documen
 set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_rst_mig_7series_0_81M_1/system_rst_mig_7series_0_81M_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_rst_mig_7series_0_81M_1/system_rst_mig_7series_0_81M_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_rst_mig_7series_0_81M_1/system_rst_mig_7series_0_81M_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_Arty_AXITDC_0_0/src/axi_gpio_0/axi_gpio_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_Arty_AXITDC_0_0/src/axi_gpio_0/axi_gpio_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_Arty_AXITDC_0_0/src/axi_gpio_0/axi_gpio_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_Arty_AXITDC_0_0/src/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_Arty_AXITDC_0_0/src/Arty-A7-35-Master-clean.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_clocks.xdc]
@@ -136,6 +133,11 @@ set_property used_in_implementation false [get_files -all c:/Users/alumn/Documen
 set_property used_in_synthesis false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_Arty_AXITDC_0_3/src/axi_gpio_0/axi_gpio_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_Arty_AXITDC_0_3/src/axi_gpio_0/axi_gpio_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_Arty_AXITDC_0_3/src/axi_gpio_0/axi_gpio_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_Arty_AXITDC_0_3/src/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_Arty_AXITDC_0_3/src/Arty-A7-35-Master-clean.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/system_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.gen/sources_1/bd/system/ip/system_microblaze_0_0/data/mb_bootloop_le.elf]
 

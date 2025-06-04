@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Wed Jun  4 11:46:47 2025
+--Date        : Wed Jun  4 15:30:50 2025
 --Host        : ASUS-Soriano running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -3615,7 +3615,7 @@ entity system is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=31,numReposBlks=21,numNonXlnxBlks=0,numHierBlks=10,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_clkrst_cnt=8,da_mb_cnt=1,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=31,numReposBlks=21,numNonXlnxBlks=0,numHierBlks=10,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=11,da_clkrst_cnt=8,da_mb_cnt=1,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
@@ -3898,7 +3898,12 @@ architecture STRUCTURE of system is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component system_rst_mig_7series_0_81M_1;
-  component system_Arty_AXITDC_0_0 is
+  component system_xlconstant_0_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component system_xlconstant_0_0;
+  component system_Arty_AXITDC_0_3 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
@@ -3960,12 +3965,7 @@ architecture STRUCTURE of system is
     trigger_out : out STD_LOGIC_VECTOR ( 10 downto 0 );
     led_out : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  end component system_Arty_AXITDC_0_0;
-  component system_xlconstant_0_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
-  );
-  end component system_xlconstant_0_0;
+  end component system_Arty_AXITDC_0_3;
   signal Arty_AXITDC_0_led_out : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal CLK100MHZ_1 : STD_LOGIC;
   signal axi_uartlite_0_UART_RxD : STD_LOGIC;
@@ -4274,7 +4274,7 @@ begin
   hit_1 <= hit;
   leds(2 downto 0) <= Arty_AXITDC_0_led_out(2 downto 0);
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
-Arty_AXITDC_0: component system_Arty_AXITDC_0_0
+Arty_AXITDC_0: component system_Arty_AXITDC_0_3
      port map (
       clk => microblaze_0_Clk,
       hit => hit_1,

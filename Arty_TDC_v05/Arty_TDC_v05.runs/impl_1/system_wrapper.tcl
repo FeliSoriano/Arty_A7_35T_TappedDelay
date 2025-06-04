@@ -123,7 +123,8 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
-  set_param runs.launchOptions { -jobs 8  }
+  set_param xicom.use_bs_reader 1
+  set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35ticsg324-1L
   set_property board_part_repo_paths {C:/Users/alumn/AppData/Roaming/Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store} [current_project]
@@ -134,7 +135,7 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.cache/wt [current_project]
   set_property parent.project_path C:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.xpr [current_project]
-  set_property ip_repo_paths C:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/ip_packager [current_project]
+  set_property ip_repo_paths C:/Users/alumn/AppData/Roaming/Xilinx/ip_repo [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/alumn/Documents/UNSAM/PFI/TDC/Full_TDC_Project/Arty_TDC_v05/Arty_TDC_v05.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

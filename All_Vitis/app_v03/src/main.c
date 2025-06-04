@@ -26,13 +26,13 @@ int main() {
 	XGpio_SetDataDirection(&led_device, LED_CHANNEL, 0);
 
     int num = 0;
-    for (volatile int i = 0; i < 1000; ++i);
+    for (volatile int i = 0; i < 100000; ++i);
     first_print();
  
 	while (1) {
 	    xil_printf("Blink nr \t %d\r\n",  num);
 		XGpio_DiscreteWrite(&led_device, LED_CHANNEL, num%2);
-        for (volatile int i = 0; i < 1000; ++i);
+        for (volatile int i = 0; i < 50000; ++i);
         num++;
 	}
 }

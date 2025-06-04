@@ -1,0 +1,41 @@
+{
+  "name": "platform_v05",
+  "type": "PLATFORM",
+  "configuration": {
+    "description": "",
+    "xsa": "C:\\Users\\alumn\\Documents\\UNSAM\\PFI\\TDC\\Full_TDC_Project\\Arty_TDC_v05\\system_wrapper_v05.xsa",
+    "xsaPathInPlatform": "platform_v05\\hw\\system_wrapper_v05.xsa",
+    "emulationXsa": "",
+    "emulationXsaPathInPlatform": "",
+    "isCustomFSBL": false,
+    "fsblPath": "",
+    "pmufwElf": "",
+    "flow": "EMBEDDED",
+    "processorsMap": {
+      "microblaze_0": "microblaze"
+    },
+    "supportedFamily": "fpga",
+    "outOfSync": false,
+    "componentType": "PLATFORM",
+    "domains": [
+      {
+        "name": "standalone_microblaze_0",
+        "displayName": "standalone_microblaze_0",
+        "processor": "microblaze_0",
+        "cpuType": "microblaze",
+        "cpuInstance": "microblaze_0",
+        "os": "standalone",
+        "appTemplate": "empty_application",
+        "isBootDomain": false,
+        "qemuData": "",
+        "qemuArgsFile": "",
+        "pmcQemuArgsFile": "",
+        "isBSPGenReq": false
+      }
+    ],
+    "emptyToolchainConfiguration": []
+  },
+  "previousBuildStatusMap": {
+    "export": "SUCCESS"
+  }
+}

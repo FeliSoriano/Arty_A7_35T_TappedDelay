@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed Jun  4 11:52:43 2025
+| Date         : Wed Jun  4 15:35:08 2025
 | Host         : ASUS-Soriano running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
@@ -178,7 +178,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | system_auto_us_0               |    1 |
 | system_auto_pc_0               |    1 |
 | system_auto_cc_0               |    1 |
-| system_Arty_AXITDC_0_0         |    1 |
+| system_Arty_AXITDC_0_3         |    1 |
 +--------------------------------+------+
 
 
